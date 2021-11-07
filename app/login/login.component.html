@@ -1,0 +1,23 @@
+<div class="container" >
+  <div class="card text-center">
+    <div class="card-header"></div>
+    <b>Login</b>
+  
+  <div class="card-body">
+    <label style="float:letf">Email</label>
+    <input class="form-control m-2"type="email" placeholder="Introduce tu gmail" [(ngModel)]="usuario.email">
+    <label style="float:letf">Password</label>
+    <input class="form-control m-2"type="password" placeholder="Introduce tu contraseña" [(ngModel)]="usuario.password">
+    <button (click)="acceder()">Acceder</button>
+    <button (click)="registrarse()">Registrarse</button>
+
+    <button (click)="accederConGoogle()" src="../../assets/google.png" alt="" height="32px" width="32px">Acceder con google</button> 
+
+    <div>
+    <button class="btn btn-info m2"(click)="getUserLogged()">Usuario Logeado</button>
+    <button class="btn btn-danger m2"(click)="logout()">Logout</button>
+    
+  </div>
+  </div>
+  </div>
+</div>

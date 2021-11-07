@@ -1,0 +1,39 @@
+<div class="container mt-4">
+  <div class="card">
+    <div class="card-body">
+      <span class="h3">Listado de Presupuestos</span>
+      <button  class="btn btn-dark btn-lg" style="float: right;" routerLink="/addpres">Añadir</button>
+      <table class="table table-striped mt-3">
+        <thead>
+          <tr>
+            <th>Proveedor</th>
+            <th>Fecha</th>
+            <th>Concepto</th>
+            <th>Base</th>
+            <th>Iva</th>
+            <th>Total</th>
+            <th> </th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let Presupuesto of presupuestosList" >
+            <td>{{Presupuesto.proveedor}}</td>
+            <td>{{Presupuesto.fecha}}</td>
+            <td>{{Presupuesto.concepto}}</td>
+            <td>{{Presupuesto.base}}</td>
+            <td>{{Presupuesto.iva}}</td>
+            <td>{{Presupuesto.total}}</td>
+            <td>
+              <a><i class="fas fa-edit fa-lg text-info mr-2"  routerLink="/editpres"></i></a></td>
+             <td> <a><i class="fas fa-trash-alt fa-lg text-danger" (click)="onDelete(Presupuesto.$key)"></i></a></td>
+            
+          </tr>
+         
+        </tbody>
+        <div></div>
+      </table>
+ 
+    </div>
+  </div>
+</div>
